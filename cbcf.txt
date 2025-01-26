@@ -1,0 +1,47 @@
+<svg id="mySVG">
+
+    <path id="animatedPath" d="..."  >
+
+        <animate attributeType="XML" attributeName="d" 
+
+                 dur="5s" 
+
+                 from="..." 
+
+                 to="..." 
+
+                 begin="indefinite" 
+
+                 fill="freeze" 
+
+                 id="pathAnimation" 
+
+        />
+
+    </path>
+
+</svg>
+
+
+
+<script>
+
+    window.addEventListener('scroll', function() {
+
+        const svg = document.getElementById('mySVG');
+
+        const rect = svg.getBoundingClientRect();
+
+        
+
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+
+            const pathAnimation = document.getElementById('pathAnimation');
+
+            pathAnimation.beginElement();
+
+        }
+
+    });
+
+</script>

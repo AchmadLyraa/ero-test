@@ -1,0 +1,118 @@
+body {
+	background-color: #333;
+	min-height: 100vh;
+}
+
+.earth-container {
+	position: absolute;
+	top: -50%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+}
+
+@media screen and (min-width: 370px) {
+	.earth-container {
+		width: 100%;
+		top: -60%;
+	}
+}
+@media screen and (min-width: 400px) {
+	.earth-container {
+		top: -70%;
+	}
+}
+
+canvas {
+	height: 500px !important;
+	/* position: absolute; */
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+
+.container {
+	max-width: 960px;
+	margin: 20px auto 0;
+	padding: 1rem;
+	background: rgba(255, 255, 255, 0.1); /* Transparan dengan opasitas rendah */
+	backdrop-filter: blur(10px); /* Efek blur */
+	-webkit-backdrop-filter: blur(10px); /* Untuk kompatibilitas Safari */
+	border: 1px solid rgba(255, 255, 255, 0.2); /* Garis tepi tipis untuk menonjolkan glass effect */
+	border-radius: 10px; /* Membuat sudut melengkung */
+	color: #ffffff; /* Warna teks tetap */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan halus */
+	position: relative; /* Agar tetap berada di atas canvas */
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+}
+
+.circle-container {
+	position: relative;
+	margin: 0 auto;
+	width: 360px;
+	height: 360px;
+	border: none;
+}
+
+circle {
+	animation: glow 2.5s infinite alternate;
+	filter: drop-shadow(0 0 5px #ffd700) drop-shadow(0 0 10px #ffd700);
+}
+
+@keyframes glow {
+	0% {
+		stroke: #d4af37; /* Gold color */
+		filter: drop-shadow(0 0 5px #d4af37) drop-shadow(0 0 10px #d4af37);
+	}
+	100% {
+		stroke: #ffd700; /* Bright Gold */
+		filter: drop-shadow(0 0 7px #ffd700) drop-shadow(0 0 15px #ffd700);
+	}
+}
+
+.glowing-circle {
+	animation: glowing 2.5s infinite alternate;
+}
+
+@keyframes glowing {
+	0% {
+		fill: #ffd700; /* Warna emas */
+		filter: drop-shadow(0 0 5px #ffd700) drop-shadow(0 0 10px #ffd700);
+	}
+	100% {
+		fill: #ffcc00; /* Warna emas lebih terang */
+		filter: drop-shadow(0 0 10px #ffd700) drop-shadow(0 0 20px #ffd700);
+	}
+}
+
+.circular-container-master {
+	width: 100%;
+	margin-top: 100px;
+	position: relative;
+	overflow-x: hidden;
+}
+.circular-container {
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.section-earth {
+	position: relative;
+	margin-top: 250px;
+	padding: 60px 20px 50px 20px;
+}
+
+@media screen and (max-width: 500px) {
+	.section-earth {
+		position: relative;
+		margin-top: 250px;
+		padding: 40px 20px 50px 20px;
+	}
+}
